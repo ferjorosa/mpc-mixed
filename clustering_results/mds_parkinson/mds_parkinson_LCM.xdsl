@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<smile version="1.0" id="DAG" numsamples="10000" discsamples="10000">
+	<nodes>
+		<cpt id="ClustVar">
+			<state id="x" />
+			<state id="x2" />
+			<state id="x3" />
+			<probabilities>0.6025371548885241 0.3901099029308422 0.007352942180633676</probabilities>
+		</cpt>
+		<cpt id="motor_fluctuations">
+			<state id="x_0" />
+			<state id="x_02" />
+			<state id="x_03" />
+			<state id="x_04" />
+			<state id="x_05" />
+			<parents>ClustVar</parents>
+			<probabilities>0.5283358606405967 0.2364128669243853 0.1166266391237711 0.06132177557826556 0.05730285773298132 0.3365444207804304 0.1738018932858437 0.1416855076955115 0.1277950234727314 0.2201731547654829 0.2077922463511062 0.1730431629793193 0.3039662939164566 0.155142146061946 0.1600561506911718</probabilities>
+		</cpt>
+		<cpt id="dyskinesias">
+			<state id="x_0" />
+			<state id="x_02" />
+			<state id="x_03" />
+			<state id="x_04" />
+			<state id="x_05" />
+			<parents>ClustVar</parents>
+			<probabilities>0.8382243866562115 0.1214090578455609 0.02820130835709131 0.00408131514772959 0.008083931993406741 0.5764795402117484 0.2513816259265792 0.07996629481467418 0.04915063809214655 0.04302190095485181 0.248508266541923 0.3106353184042404 0.1495261407746293 0.1456651371396037 0.1456651371396037</probabilities>
+		</cpt>
+		<cpt id="bradykinesia">
+			<state id="x_0" />
+			<state id="x_02" />
+			<state id="x_03" />
+			<state id="x_04" />
+			<state id="x_05" />
+			<parents>ClustVar</parents>
+			<probabilities>0.01604989474962577 0.2484775256725437 0.4338304243295044 0.2440032661067464 0.0576388891415797 0.006189004980353015 0.1060575927908705 0.4135017271917443 0.3838995804201056 0.09035209461692659 0.1442611358177762 0.1702351602928903 0.2039312503708839 0.1856791748820394 0.2958932786364102</probabilities>
+		</cpt>
+		<cpt id="tremor_rest">
+			<state id="x_0" />
+			<state id="x_02" />
+			<state id="x_03" />
+			<state id="x_04" />
+			<state id="x_05" />
+			<parents>ClustVar</parents>
+			<probabilities>0.4093019623893806 0.2955917992614479 0.2299407135994161 0.05714057737494269 0.008024947374812885 0.5064892765214346 0.2063960214161846 0.2268241588042582 0.05413165509032593 0.00615888816779655 0.2070901951535117 0.3232713626399547 0.1755001652836713 0.150579141766 0.1435591351568624</probabilities>
+		</cpt>
+		<cpt id="tremor_kin">
+			<state id="x_0" />
+			<state id="x_02" />
+			<state id="x_03" />
+			<state id="x_04" />
+			<state id="x_05" />
+			<parents>ClustVar</parents>
+			<probabilities>0.5155970296822912 0.3322633929049733 0.1320688863703173 0.01605821735501188 0.004012473687406442 0.4977043263719576 0.3534583106290339 0.1303583835176217 0.01233514971986864 0.006143829761518321 0.2158652110089601 0.1916462063969364 0.3046683116194649 0.144612136148233 0.1432081348264056</probabilities>
+		</cpt>
+		<cpt id="tremor_post">
+			<state id="x_0" />
+			<state id="x_02" />
+			<state id="x_03" />
+			<state id="x_04" />
+			<state id="x_05" />
+			<parents>ClustVar</parents>
+			<probabilities>0.4026244206840542 0.4063402659838359 0.1578050470177416 0.02921779262696172 0.004012473687406442 0.4612838184607835 0.3447643082158915 0.15251038891557 0.0352976546462365 0.006143829761518321 0.2039311922131959 0.3408213791701517 0.1649701553288158 0.1470691384614312 0.1432081348264056</probabilities>
+		</cpt>
+		<cpt id="postural_stability">
+			<state id="x_0" />
+			<state id="x_02" />
+			<state id="x_03" />
+			<state id="x_04" />
+			<state id="x_05" />
+			<parents>ClustVar</parents>
+			<probabilities>0.491332693829584 0.2752852167233085 0.1290514847603834 0.08705666044549185 0.01727394424123213 0.3993619139642914 0.2066645514438021 0.1719319049357176 0.180773538911998 0.04126809074419072 0.2081432218868148 0.1783081679514024 0.3067743213423928 0.1604071510188726 0.1463671378005174</probabilities>
+		</cpt>
+		<cpt id="freezing">
+			<state id="x_0" />
+			<state id="x_02" />
+			<state id="x_03" />
+			<state id="x_04" />
+			<state id="x_05" />
+			<parents>ClustVar</parents>
+			<probabilities>0.8639370688228202 0.07846953935067465 0.03322722825061557 0.0203438553941514 0.004022308181738321 0.6972398207750174 0.138491995524631 0.1030952515377438 0.04888527263957113 0.01228765952303664 0.2576343010045949 0.1572481480458106 0.2944892773313009 0.1470691384614312 0.1435591351568624</probabilities>
+		</cpt>
+		<cpt id="gait">
+			<state id="x_0" />
+			<state id="x_02" />
+			<state id="x_03" />
+			<state id="x_04" />
+			<state id="x_05" />
+			<parents>ClustVar</parents>
+			<probabilities>0.2389722493472304 0.5430592885509041 0.1511638554265033 0.05899366985274689 0.007810936822615417 0.1637241222638902 0.4494957051069098 0.2119804878536498 0.1559953310454381 0.01880435373011195 0.1726921884170249 0.2155142354238241 0.3109862929576067 0.1565461473837682 0.1442611358177762</probabilities>
+		</cpt>
+		<cpt id="rigidity">
+			<state id="x_0" />
+			<state id="x_02" />
+			<state id="x_03" />
+			<state id="x_04" />
+			<state id="x_05" />
+			<parents>ClustVar</parents>
+			<probabilities>0.1299769352359859 0.4737853960911397 0.2881341595809671 0.08820279899643341 0.01990071009547388 0.1027369860376276 0.3708000376767409 0.3594694574248168 0.1420652625363569 0.024928256324458 0.1597051503579944 0.2049841997061445 0.3313443637587138 0.1583011490375436 0.1456651371396037</probabilities>
+		</cpt>
+		<cpt id="speech">
+			<state id="x_0" />
+			<state id="x_02" />
+			<state id="x_03" />
+			<state id="x_04" />
+			<state id="x_05" />
+			<parents>ClustVar</parents>
+			<probabilities>0.4089248481411 0.3965442157075096 0.1768696821071558 0.01364878035682809 0.004012473687406443 0.2299167396934771 0.3905281736961313 0.2711623848514594 0.1022488719974138 0.006143829761518321 0.1912951812135409 0.1993682449877541 0.3166022981976702 0.1495261407746293 0.1432081348264056</probabilities>
+		</cpt>
+		<equation id="sweating">
+			<parents>ClustVar</parents>
+			<definition lower="0" upper="12">sweating=Choose(ClustVar,Normal(0.0248066,0.0471735),Normal(2.16643,11.8101),Normal(0.431592,3.05875))</definition>
+			<discretization>
+				<interval upper="1.2" />
+				<interval upper="2.4" />
+				<interval upper="3.6" />
+				<interval upper="4.8" />
+				<interval upper="6" />
+				<interval upper="7.2" />
+				<interval upper="8.4" />
+				<interval upper="9.6" />
+				<interval upper="10.8" />
+				<interval upper="12" />
+			</discretization>
+		</equation>
+		<equation id="weight_change">
+			<parents>ClustVar</parents>
+			<definition lower="0" upper="12">weight_change=Choose(ClustVar,Normal(0.00284016,0.0227257),Normal(1.76836,11.0515),Normal(0.347015,2.66192))</definition>
+			<discretization>
+				<interval upper="1.2" />
+				<interval upper="2.4" />
+				<interval upper="3.6" />
+				<interval upper="4.8" />
+				<interval upper="6" />
+				<interval upper="7.2" />
+				<interval upper="8.4" />
+				<interval upper="9.6" />
+				<interval upper="10.8" />
+				<interval upper="12" />
+			</discretization>
+		</equation>
+		<equation id="smell">
+			<parents>ClustVar</parents>
+			<definition lower="0" upper="12">smell=Choose(ClustVar,Normal(3.29368,18.598),Normal(5.49989,24.1678),Normal(2.07463,15.2705))</definition>
+			<discretization>
+				<interval upper="1.2" />
+				<interval upper="2.4" />
+				<interval upper="3.6" />
+				<interval upper="4.8" />
+				<interval upper="6" />
+				<interval upper="7.2" />
+				<interval upper="8.4" />
+				<interval upper="9.6" />
+				<interval upper="10.8" />
+				<interval upper="12" />
+			</discretization>
+		</equation>
+		<equation id="sexual">
+			<parents>ClustVar</parents>
+			<definition lower="0" upper="12">sexual=Choose(ClustVar,Normal(0.591902,1.58092),Normal(3.27968,15.9864),Normal(0.821347,5.14543))</definition>
+			<discretization>
+				<interval upper="1.2" />
+				<interval upper="2.4" />
+				<interval upper="3.6" />
+				<interval upper="4.8" />
+				<interval upper="6" />
+				<interval upper="7.2" />
+				<interval upper="8.4" />
+				<interval upper="9.6" />
+				<interval upper="10.8" />
+				<interval upper="12" />
+			</discretization>
+		</equation>
+		<equation id="urinary">
+			<parents>ClustVar</parents>
+			<definition lower="0" upper="12">urinary=Choose(ClustVar,Normal(1.44501,3.52432),Normal(3.25429,9.99784),Normal(1.24196,4.24397))</definition>
+			<discretization>
+				<interval upper="1.2" />
+				<interval upper="2.4" />
+				<interval upper="3.6" />
+				<interval upper="4.8" />
+				<interval upper="6" />
+				<interval upper="7.2" />
+				<interval upper="8.4" />
+				<interval upper="9.6" />
+				<interval upper="10.8" />
+				<interval upper="12" />
+			</discretization>
+		</equation>
+		<equation id="gastrointestinal">
+			<parents>ClustVar</parents>
+			<definition lower="0" upper="10">gastrointestinal=Choose(ClustVar,Normal(0.795186,1.36975),Normal(1.98842,4.72306),Normal(0.630182,1.90801))</definition>
+			<discretization>
+				<interval upper="1" />
+				<interval upper="2" />
+				<interval upper="3" />
+				<interval upper="4" />
+				<interval upper="5" />
+				<interval upper="6" />
+				<interval upper="7" />
+				<interval upper="8" />
+				<interval upper="9" />
+				<interval upper="10" />
+			</discretization>
+		</equation>
+		<equation id="attention_memory">
+			<parents>ClustVar</parents>
+			<definition lower="0" upper="10">attention_memory=Choose(ClustVar,Normal(0.748023,1.09593),Normal(2.49561,6.17572),Normal(0.715174,2.41818))</definition>
+			<discretization>
+				<interval upper="1" />
+				<interval upper="2" />
+				<interval upper="3" />
+				<interval upper="4" />
+				<interval upper="5" />
+				<interval upper="6" />
+				<interval upper="7" />
+				<interval upper="8" />
+				<interval upper="9" />
+				<interval upper="10" />
+			</discretization>
+		</equation>
+		<equation id="hallucinations">
+			<parents>ClustVar</parents>
+			<definition lower="0" upper="7">hallucinations=Choose(ClustVar,Normal(0.153576,0.281471),Normal(0.64547,1.55037),Normal(0.172886,0.447584))</definition>
+			<discretization>
+				<interval upper="0.7" />
+				<interval upper="1.4" />
+				<interval upper="2.1" />
+				<interval upper="2.8" />
+				<interval upper="3.5" />
+				<interval upper="4.2" />
+				<interval upper="4.9" />
+				<interval upper="5.600000000000001" />
+				<interval upper="6.300000000000001" />
+				<interval upper="7" />
+			</discretization>
+		</equation>
+		<equation id="mood_cognition">
+			<parents>ClustVar</parents>
+			<definition lower="0" upper="10">mood_cognition=Choose(ClustVar,Normal(0.459958,0.509256),Normal(2.08672,6.08783),Normal(1.21616,1.67451))</definition>
+			<discretization>
+				<interval upper="1" />
+				<interval upper="2" />
+				<interval upper="3" />
+				<interval upper="4" />
+				<interval upper="5" />
+				<interval upper="6" />
+				<interval upper="7" />
+				<interval upper="8" />
+				<interval upper="9" />
+				<interval upper="10" />
+			</discretization>
+		</equation>
+		<equation id="sleep_fatigue">
+			<parents>ClustVar</parents>
+			<definition lower="0" upper="12">sleep_fatigue=Choose(ClustVar,Normal(1.29116,2.10087),Normal(2.99561,6.11025),Normal(2.23072,2.25103))</definition>
+			<discretization>
+				<interval upper="1.2" />
+				<interval upper="2.4" />
+				<interval upper="3.6" />
+				<interval upper="4.8" />
+				<interval upper="6" />
+				<interval upper="7.2" />
+				<interval upper="8.4" />
+				<interval upper="9.6" />
+				<interval upper="10.8" />
+				<interval upper="12" />
+			</discretization>
+		</equation>
+		<equation id="cardiovascular">
+			<parents>ClustVar</parents>
+			<definition lower="0" upper="9">cardiovascular=Choose(ClustVar,Normal(0.401679,0.6597),Normal(0.916155,1.819),Normal(4.81219,18.2122))</definition>
+			<discretization>
+				<interval upper="0.9" />
+				<interval upper="1.8" />
+				<interval upper="2.7" />
+				<interval upper="3.6" />
+				<interval upper="4.5" />
+				<interval upper="5.4" />
+				<interval upper="6.300000000000001" />
+				<interval upper="7.200000000000001" />
+				<interval upper="8.100000000000001" />
+				<interval upper="9" />
+			</discretization>
+		</equation>
+	</nodes>
+	<extensions>
+		<genie version="1.0" app="GeNIe This network was created in GeNIe Academic, which can be used for academic teaching and research purposes only" name="DAG">
+			<node id="cardiovascular">
+				<name>cardiovascular</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000080" name="Arial" size="10" bold="true" />
+				<position>90 385 90 385</position>
+				<barchart active="true" width="160" height="220" />
+			</node>
+			<node id="sleep_fatigue">
+				<name>sleep_fatigue</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000080" name="Arial" size="10" bold="true" />
+				<position>283 385 283 385</position>
+				<barchart active="true" width="160" height="220" />
+			</node>
+			<node id="mood_cognition">
+				<name>mood_cognition</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000080" name="Arial" size="10" bold="true" />
+				<position>476 385 476 385</position>
+				<barchart active="true" width="160" height="220" />
+			</node>
+			<node id="hallucinations">
+				<name>hallucinations</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000080" name="Arial" size="10" bold="true" />
+				<position>669 385 669 385</position>
+				<barchart active="true" width="160" height="220" />
+			</node>
+			<node id="attention_memory">
+				<name>attention_memory</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000080" name="Arial" size="10" bold="true" />
+				<position>862 385 862 385</position>
+				<barchart active="true" width="160" height="220" />
+			</node>
+			<node id="gastrointestinal">
+				<name>gastrointestinal</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000080" name="Arial" size="10" bold="true" />
+				<position>1055 385 1055 385</position>
+				<barchart active="true" width="160" height="220" />
+			</node>
+			<node id="urinary">
+				<name>urinary</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000080" name="Arial" size="10" bold="true" />
+				<position>1248 385 1248 385</position>
+				<barchart active="true" width="160" height="220" />
+			</node>
+			<node id="sexual">
+				<name>sexual</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000080" name="Arial" size="10" bold="true" />
+				<position>1441 385 1441 385</position>
+				<barchart active="true" width="160" height="220" />
+			</node>
+			<node id="smell">
+				<name>smell</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000080" name="Arial" size="10" bold="true" />
+				<position>1634 385 1634 385</position>
+				<barchart active="true" width="160" height="220" />
+			</node>
+			<node id="weight_change">
+				<name>weight_change</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000080" name="Arial" size="10" bold="true" />
+				<position>1827 385 1827 385</position>
+				<barchart active="true" width="160" height="220" />
+			</node>
+			<node id="sweating">
+				<name>sweating</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000080" name="Arial" size="10" bold="true" />
+				<position>2020 385 2020 385</position>
+				<barchart active="true" width="160" height="220" />
+			</node>
+			<node id="speech">
+				<name>speech</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000080" name="Arial" size="10" bold="true" />
+				<position>2213 385 2213 385</position>
+				<barchart active="true" width="160" height="120" />
+			</node>
+			<node id="rigidity">
+				<name>rigidity</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000080" name="Arial" size="10" bold="true" />
+				<position>2406 385 2406 385</position>
+				<barchart active="true" width="160" height="120" />
+			</node>
+			<node id="gait">
+				<name>gait</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000080" name="Arial" size="10" bold="true" />
+				<position>2599 385 2599 385</position>
+				<barchart active="true" width="160" height="120" />
+			</node>
+			<node id="freezing">
+				<name>freezing</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000080" name="Arial" size="10" bold="true" />
+				<position>2792 385 2792 385</position>
+				<barchart active="true" width="160" height="120" />
+			</node>
+			<node id="postural_stability">
+				<name>postural_stability</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000080" name="Arial" size="10" bold="true" />
+				<position>2985 385 2985 385</position>
+				<barchart active="true" width="160" height="120" />
+			</node>
+			<node id="tremor_post">
+				<name>tremor_post</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000080" name="Arial" size="10" bold="true" />
+				<position>3178 385 3178 385</position>
+				<barchart active="true" width="160" height="120" />
+			</node>
+			<node id="tremor_kin">
+				<name>tremor_kin</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000080" name="Arial" size="10" bold="true" />
+				<position>3371 385 3371 385</position>
+				<barchart active="true" width="160" height="120" />
+			</node>
+			<node id="tremor_rest">
+				<name>tremor_rest</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000080" name="Arial" size="10" bold="true" />
+				<position>3564 385 3564 385</position>
+				<barchart active="true" width="160" height="120" />
+			</node>
+			<node id="bradykinesia">
+				<name>bradykinesia</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000080" name="Arial" size="10" bold="true" />
+				<position>3757 385 3757 385</position>
+				<barchart active="true" width="160" height="120" />
+			</node>
+			<node id="dyskinesias">
+				<name>dyskinesias</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000080" name="Arial" size="10" bold="true" />
+				<position>3950 385 3950 385</position>
+				<barchart active="true" width="160" height="120" />
+			</node>
+			<node id="motor_fluctuations">
+				<name>motor_fluctuations</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000080" name="Arial" size="10" bold="true" />
+				<position>4143 385 4143 385</position>
+				<barchart active="true" width="160" height="120" />
+			</node>
+			<node id="ClustVar">
+				<name>ClustVar</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000080" name="Arial" size="10" bold="true" />
+				<position>2026 96 2026 96</position>
+				<barchart active="true" width="160" height="110" />
+			</node>
+		</genie>
+	</extensions>
+</smile>

@@ -30,10 +30,7 @@ import eu.amidst.extension.util.PriorsFromData;
 import eu.amidst.extension.util.tuple.Tuple2;
 import eu.amidst.extension.util.tuple.Tuple3;
 import experiments.util.JsonResult;
-import methods.CIL;
-import methods.IL;
-import methods.UKDB;
-import methods.VariationalLCM;
+import methods.*;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -53,12 +50,8 @@ public class Exp_MDS_Parkinson {
 
         learnLCM(seed, resultsPath, nVbemCandidates, LogUtils.LogLevel.INFO);
         learnUKDB(seed, resultsPath, nVbemCandidates, nVbsemCandidates, LogUtils.LogLevel.INFO, LogUtils.LogLevel.NONE, LogUtils.LogLevel.NONE);
-        learnCIL(seed, resultsPath, nVbemCandidates, 1, LogUtils.LogLevel.INFO);
-        learnCIL(seed, resultsPath, nVbemCandidates, 10, LogUtils.LogLevel.INFO);
-        learnIL(seed, resultsPath, nVbemCandidates, LogUtils.LogLevel.INFO);
-        learnGLSL(seed, resultsPath, nVbemCandidates, nVbsemCandidates, Integer.MAX_VALUE, 1, LogUtils.LogLevel.INFO);
-        learnGLSL_CIL(seed, resultsPath, nVbemCandidates, nVbsemCandidates, 1, Integer.MAX_VALUE, 1, LogUtils.LogLevel.INFO);
         learnGLSL_CIL(seed, resultsPath, nVbemCandidates, nVbsemCandidates, 10, Integer.MAX_VALUE, 1, LogUtils.LogLevel.INFO);
+        learnMPMM(seed, resultsPath, nVbemCandidates, LogUtils.LogLevel.INFO);
     }
 
     private static void learnLCM(long seed,
@@ -514,6 +507,63 @@ public class Exp_MDS_Parkinson {
         DataUtils.defineAttributesMaxMinValues(completeDataWithLatents);
         GenieWriter genieWriter = new GenieWriter();
         genieWriter.write(posteriorPredictive, new File(resultsPath + "/" + fileName + ".xdsl"));
+
+        /* Export model in AMIDST format */
+        BayesianNetworkWriter.save(posteriorPredictive, resultsPath + "/" + fileName + ".bn");
+    }
+
+    private static void learnMPMM(long seed,
+                                String resultsPath,
+                                int nVbemCandidates,
+                                LogUtils.LogLevel logLevel) throws Exception {
+
+        new File(resultsPath).mkdirs();
+
+        String fileName = "mds_parkinson_mpmm";
+
+        DataOnMemory<DataInstance> data = DataStreamLoader.loadDataOnMemoryFromFile("data/mds_parkinson/mds_parkinson_train.arff");
+
+        /* Generate Empirical Bayes priors from data, ignoring missing values */
+        Map<String, double[]> priors = PriorsFromData.generate(data, 1);
+
+        Tuple3<BayesianNetwork, Double, Long> result = MPMM.learnModel(data, seed, logLevel, true);
+        BayesianNetwork posteriorPredictive = result.getFirst();
+        double elbo = result.getSecond();
+        long learningTime = result.getThird();
+        double logLikelihood = EstimatePredictiveScore.amidstLL(posteriorPredictive, data);
+        double bic = EstimatePredictiveScore.amidstBIC(posteriorPredictive, data);
+        double aic = EstimatePredictiveScore.amidstAIC(posteriorPredictive, data);
+
+        System.out.println("---------------------");
+        System.out.println("Learning time (seconds): " + learningTime);
+        System.out.println("ELBO: " + elbo);
+        System.out.println("LogLikelihood: " + logLikelihood);
+        System.out.println("BIC: " + bic);
+        System.out.println("AIC: " + aic);
+
+        int nParams = posteriorPredictive.getNumberOfParameters();
+        int nClusteringVars = (int) posteriorPredictive.getVariables().getListOfVariables().stream().filter(x->x.isDiscrete() && !x.isObservable()).count();
+
+        System.out.println("Num of params: " + nParams);
+        System.out.println("Num of clustering vars: " + nClusteringVars);
+
+        /* Write the Json result file */
+        JsonResult jsonResult = new JsonResult(learningTime, elbo, logLikelihood, bic, aic,0, nVbemCandidates, nParams, nClusteringVars);
+        try (Writer writer = new FileWriter(resultsPath + "/" + fileName + ".json")) {
+            Gson gson = new GsonBuilder().setPrettyPrinting().create();
+            gson.toJson(jsonResult, writer);
+        }
+
+        /*
+         * Complete latent variables
+         */
+        DataOnMemory<DataInstance> completeDataWithLatents = DataUtils.completeLatentData(data, posteriorPredictive);
+        DataStreamWriter.writeDataToFile(completeDataWithLatents, resultsPath + "/" + fileName + ".arff");
+
+        /* Write the XDSL (Genie) file */
+//        DataUtils.defineAttributesMaxMinValues(completeDataWithLatents);
+//        GenieWriter genieWriter = new GenieWriter();
+//        genieWriter.write(posteriorPredictive, new File(resultsPath + "/" + fileName + ".xdsl"));
 
         /* Export model in AMIDST format */
         BayesianNetworkWriter.save(posteriorPredictive, resultsPath + "/" + fileName + ".bn");

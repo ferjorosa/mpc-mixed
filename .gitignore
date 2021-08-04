@@ -1,0 +1,55 @@
+*.class
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+.idea/
+.bsp/
+out/
+*.iml
+target/
+project/
+project/build.properties
+output/
+
+# Python
+**/.ipynb_checkpoints/
+**/__pycache__/
+
+# R
+.Rproj.user
+.RData
+.RHistory
+*.Rproj
+
+# Data
+latent_data/
+latent_data_east/
+missing_data/
+
+# Tex
+*.aux
+*.glo
+*.idx
+*.log
+*.toc
+*.ist
+*.acn
+*.acr
+*.alg
+*.bbl
+*.blg
+*.dvi
+*.glg
+*.gls
+*.ilg
+*.ind
+*.lof
+*.lot
+*.maf
+*.mtc
+*.mtc1
+*.out
+*.synctex.gz

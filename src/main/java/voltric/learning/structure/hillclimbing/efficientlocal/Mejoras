@@ -1,0 +1,2 @@
+Dado que isEdgeAllowed puede ser muy costoso, quizas es mejor aprender todos los arcos y despues, una vez descartados
+aquellos que no mejoran el score, probar si el arco se encuentra permitido

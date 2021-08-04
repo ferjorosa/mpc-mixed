@@ -1,0 +1,2 @@
+Dado que en los HillClimbers permitimos que el usuario incluya arcos prohibidos, no podemos asegurar estructuras tree
+o polytree (ya que se prohibe a lo mejor un arco necesario para ello) pero si podemos asegurar forest y polyforest.

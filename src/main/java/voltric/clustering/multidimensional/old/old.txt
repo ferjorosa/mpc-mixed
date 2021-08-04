@@ -1,0 +1,3 @@
+Lo que agrupo dentro del paquete old no es mas que el codigo que hice durante el master o al inicio de la tesis.
+
+Dado que ciertas de las cosas que escribia no estan terminadas o no me gusta como quedan, las he dejado apartadas.

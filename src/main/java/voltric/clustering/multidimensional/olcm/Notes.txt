@@ -1,0 +1,13 @@
+En principio vamos a hacer estos metodos sin blacklists ni nada, el proceso de Hill-climbing completo para OLCMs, si
+veo que es necesario hacelro mas complejo, lo hago
+
+Existen 2 versiones de OLCM HC:
+
+1) Expansion-Simplificacion
+
+    Expansion: AddOlcmArc, AddOlcmNode, IncreaseOlcmCard
+    Simplificacion: RemoveOlcmArc, RemoveOlcmNode,
+
+2) Expansion-simplificacion con cardinalidad separada
+
+    Expansion: AddOlcmArc, AddOlcmNode

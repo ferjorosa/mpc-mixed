@@ -1,0 +1,2 @@
+LocalHillClimbing permite varias estructuras mientras que EffLocalHillClimbing solo permite DAG. Por ahora lo utilizo como
+benchmark de computacion.

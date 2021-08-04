@@ -1,0 +1,36 @@
+    /**
+     * Returns the nodes in this graph in a topological order.
+     *
+     * @return the nodes in this graph in a topological order.
+     */
+    public final List<AbstractNode<T>> topologicalSort() {
+        // discovering and finishing time
+        HashMap<AbstractNode<T>, Integer> d = new HashMap<>();
+        HashMap<AbstractNode<T>, Integer> f = new HashMap<>();
+
+        // DFS
+        int time = 0;
+        for (AbstractNode<T> node : this.nodes) {
+            if (!d.containsKey(node)) {
+                time = depthFirstSearch(node, time, d, f);
+            }
+        }
+
+        // sorts nodes in descending order with respect to their finishing time.
+        // note that the finishing time lies in [1, elasped time - 1].
+        List<AbstractNode<T>> nodes = new ArrayList<>(time);
+        for (AbstractNode<T> node : this.nodes) {
+            nodes.add(time - f.get(node), node);
+        }
+
+        // remove nulls
+        List<AbstractNode<T>> compactNodes = new ArrayList<>(this.getNumberOfNodes());
+        int i = 0;
+        for (AbstractNode<T> node : nodes) {
+            if (node != null) {
+                compactNodes.add(i++, node);
+            }
+        }
+
+        return compactNodes;
+    }

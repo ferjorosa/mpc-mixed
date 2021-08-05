@@ -58,5 +58,5 @@ class DiscreteExperiment(metaclass=ABCMeta):
         KDE.apply(train_datasets, self.var_types_string, test_datasets, n_folds, results_path, self.data_name, fold_log, kde_bw)
 
         # Apply MSPN
-        # results_path = "../../../latent_results/run_" + str(run) + "/discrete/" + self.data_name + "/" + str(n_folds) + "_folds/MSPN/"
-        # MSPN.apply(train_datasets, ds_contexts, test_datasets, n_folds, results_path, self.data_name, fold_log)
+        results_path = "../../../latent_results/run_" + str(run) + "/discrete/" + self.data_name + "/" + str(n_folds) + "_folds/MSPN/"
+        MSPN.apply(train_datasets, ds_contexts, test_datasets, n_folds, results_path, self.data_name, fold_log)

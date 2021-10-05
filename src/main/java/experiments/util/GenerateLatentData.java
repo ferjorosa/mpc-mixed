@@ -26,7 +26,7 @@ public class GenerateLatentData {
 
         String[] dataTypes = {"discrete", "continuous", "mixed"};
 
-        String inputBasePath = "selected_data";
+        String inputBasePath = "data";
         String outputBasePath = "latent_data";
 
         for(String dataType: dataTypes) {

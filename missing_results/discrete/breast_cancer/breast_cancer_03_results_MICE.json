@@ -1,0 +1,26 @@
+{
+    "average_learning_time": 0.1145966796875,
+    "average_accuracy": 0.5422382671480145,
+    "runs": {
+        "run_1": {
+            "accuracy": 0.5451263537906137,
+            "learning_time": 120.5546875
+        },
+        "run_2": {
+            "accuracy": 0.5728038507821901,
+            "learning_time": 116.685546875
+        },
+        "run_3": {
+            "accuracy": 0.47653429602888087,
+            "learning_time": 104.43212890625
+        },
+        "run_4": {
+            "accuracy": 0.5631768953068592,
+            "learning_time": 100.52783203125
+        },
+        "run_5": {
+            "accuracy": 0.5535499398315282,
+            "learning_time": 130.783203125
+        }
+    }
+}

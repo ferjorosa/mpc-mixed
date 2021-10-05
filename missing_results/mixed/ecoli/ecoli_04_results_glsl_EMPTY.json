@@ -1,0 +1,38 @@
+{
+    "average_accuracy": 0.8287355516081905,
+    "average_error": 0.14591537287763054,
+    "average_learning_time": 1315.403,
+    "average_nrmse": 0.14169052695860068,
+    "runs": {
+        "run_1": {
+            "accuracy": 0.8266666666666667,
+            "average_error": 0.14767803944689264,
+            "learning_time": 1413233,
+            "nrmse": 0.14340215713248586
+        },
+        "run_2": {
+            "accuracy": 0.8279837967580184,
+            "average_error": 0.1465558595069658,
+            "learning_time": 1168812,
+            "nrmse": 0.14231246888446314
+        },
+        "run_3": {
+            "accuracy": 0.8275531289250841,
+            "average_error": 0.14692278362939212,
+            "learning_time": 1144071,
+            "nrmse": 0.14266876905513817
+        },
+        "run_4": {
+            "accuracy": 0.8271257307145891,
+            "average_error": 0.14728692207048266,
+            "learning_time": 1445380,
+            "nrmse": 0.14302236420132794
+        },
+        "run_5": {
+            "accuracy": 0.8322795500350704,
+            "average_error": 0.14289592630368156,
+            "learning_time": 1503351,
+            "nrmse": 0.13875850569347353
+        }
+    }
+}

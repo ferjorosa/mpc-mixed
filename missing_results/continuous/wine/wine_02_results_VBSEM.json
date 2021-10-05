@@ -1,0 +1,26 @@
+{
+  "average_nrmse": 0.1606908626920992,
+  "average_learning_time": 18.0152,
+  "runs": {
+    "run_1": {
+      "nrmse": 0.156198523129417,
+      "learning_time": 16998
+    },
+    "run_2": {
+      "nrmse": 0.16688688275266442,
+      "learning_time": 21222
+    },
+    "run_3": {
+      "nrmse": 0.15812591745139468,
+      "learning_time": 21536
+    },
+    "run_4": {
+      "nrmse": 0.16205184066710274,
+      "learning_time": 17736
+    },
+    "run_5": {
+      "nrmse": 0.16019114945991708,
+      "learning_time": 12584
+    }
+  }
+}

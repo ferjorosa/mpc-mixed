@@ -1,7 +1,9 @@
 # mpc-mixed
 [![Build Status](https://www.travis-ci.com/ferjorosa/mpc-mixed.svg?branch=main)](https://www.travis-ci.com/ferjorosa/mpc-mixed) [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-Multi-partition clustering of mixed data with Bayesian networks
+This is the code repository of the paper [Multi-partition clustering of mixed data with Bayesian networks](https://onlinelibrary.wiley.com/doi/abs/10.1002/int.22770) (International Journal of Intelligent Systems).
+
+
 
 ## Project organization
 This project is organized in several folders:
